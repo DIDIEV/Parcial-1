@@ -37,7 +37,13 @@ public class Main {
 
                     break;
                 case 2:
-
+                    System.out.println("please enter the name of the observer: ");
+                    String removed = scanner.nextLine();
+                    for(Observer observer : blancaMontanhez.observers){
+                        if(observer.getName().equals(removed)){
+                            blancaMontanhez.removeObserver(observer);
+                        }
+                    }
                     break;
                 default:
                     System.out.println("turning off the software...");
